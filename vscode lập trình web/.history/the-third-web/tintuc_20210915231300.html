@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="https://kit.fontawesome.com/c033af5def.js" crossorigin="anonymous"></script>
+    <title>Tin tức</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+        .web{
+            max-width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        video{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+            opacity: 0.85;
+        }
+
+        .hero{
+            max-width: 70px;
+            height: 70px;
+            display: block;
+            z-index: 1;
+        }
+
+        .toggle{
+            position: relative;
+            background-color: blue;
+            width: 70px;
+            height: 70px;
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            cursor: pointer;
+        }
+
+        .toggle.active{
+            background-color: pink;
+        }
+
+        .toggle i{
+            color: white;
+            position: absolute;
+            display: none;
+        }
+
+        .toggle i.fa-bars, .toggle.active i.fa-times{
+            display: block;
+        }
+
+        .toggle i.fa-times, .toggle.active i.fa-bars{
+            display: none;
+        }    
+
+        .menu{
+            background-color: black;
+            width: 70px;
+            height: 210px;
+            border-radius: 5px;
+            display: none;
+            flex-direction: column;
+            position: relative;
+            animation: height 1s;
+            overflow: hidden;
+        }
+
+        .menu-con{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            margin: 10px auto;
+            width: 70px;
+            height: 70px;
+            overflow: hidden;   
+        }
+
+        @keyframes height {
+            0%{
+                top: -200px;
+            }
+            100%{
+                top: 0px;
+            }
+            
+        }
+
+        .text{
+            font-size: 12px;
+            color: white;
+            visibility: visible;
+            transition: linear 0.2s;
+            text-align: center;
+        }
+
+        .icon {
+            min-width: 70px;
+            height: 70px;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            justify-items: center;
+            border-radius:5px ;
+            color: red;
+            cursor: pointer;
+            transition: linear 0.3s;
+            position: absolute;
+            font-size: 35px;
+        }
+
+        .menu-con:hover .icon{
+            background-color: red;
+            color: black;
+        }
+
+        .menu.active{
+            display: flex;
+            animation: height 1s;
+        }
+
+        .menu-con:hover .text{
+            visibility: visible;
+        }
+
+        .plus{
+            overflow: hidden;
+        }    
+
+        .content1{
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-between;
+            justify-items: center;
+            align-items: center;
+            padding: 10px 10px;
+            position: fixed;
+            transition: linear 0.3s;
+        }
+
+        .content1 img{
+            width: 200px;
+        }
+
+        .content1.sticky{
+            background-color: white;
+            opacity: 0.8;
+        }
+
+        
+
+        .footer{
+            width: 100%;
+            height: 40vh;
+            background-color: black;
+            border-top-left-radius:100px ;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .footer ul {
+            margin: 30px 40px;
+        }
+
+        .footer li{
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 20px;
+            list-style-type: none;
+        }
+
+        .underline{
+            content: "";
+            width: 100%;
+            height: 4px;
+            border-radius: 10px;
+            background-color: white;
+            position:absolute;
+            bottom: -7px;
+            left: 0px;
+            overflow: hidden;
+        }
+
+        .underline span {
+            content: "";
+            width: 15%;
+            height: 4px;
+            border-radius: 10px;
+            background-color: red;
+            position:absolute;
+            bottom: 0px;
+            left: 0px;
+            animation: moving 2s linear infinite;
+        }
+
+        @keyframes moving {
+            0%{
+                left: -10px;
+            }
+            100%{
+                left: 100%;
+            }            
+        }
+
+        .logo{
+            display: flex;
+            flex-direction: column;
+            width: 400px;
+            height: auto;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .logo li{
+            margin-top: 20px;
+            display: flex;
+            text-align: center;
+        }
+
+        .logo img{
+            width: 200px;
+        }
+
+        .social{
+            display: block;
+        }
+
+        .social li{
+            list-style-type: none;
+            line-height: 20px;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            justify-content: left;
+            margin: 20px 0px;
+            position: relative;
+        }
+
+        .social i{
+            margin-right: 5px;
+            visibility: hidden;
+        }
+
+        .social a{
+            display: flex;
+            position: relative;
+            text-decoration: none;
+            color: white;            
+        }
+
+        .social h3{
+            position: relative;
+        }
+
+        .social-icon i{
+            transition: linear 0.1s;
+        }
+
+        .social a:hover{
+            opacity: 0.7;
+        }
+        
+        .social-con:hover .social-icon i{
+            visibility: visible;
+        }
+
+        .copyright{
+            display: block;
+        }
+
+        .copyright li{
+            list-style-type: none;
+            line-height: 20px;
+            display: flex;
+            justify-items: center;
+            align-items: center;
+            justify-content: left;
+            margin: 20px 0px;
+        }
+
+        .copyright i{
+            margin-right: 2px;
+        }
+
+        .copyright a{
+            display: flex;
+            position: relative;
+            text-decoration: none;
+            color: white;            
+        }
+
+        .copyright h3{
+            position: relative;
+        }
+
+        .backhome{
+            position: fixed;
+            z-index: 3;
+            visibility: visible;
+            color: white;
+            background-color: orange;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            float: right;
+            cursor: pointer;
+            bottom: 20px;
+            right: 20px;
+            visibility: hidden;
+        }
+
+        .backhome:hover{
+            background-color: red;
+        }
+
+        .backhome.show{
+            visibility: visible;
+            opacity: 0.8;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center ;
+            align-items: center;
+        }
+
+        .search-hero{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            justify-items: center;
+            background-color: darkslategrey;
+            border-radius: 30px;
+            height:60px ;
+            position: relative;
+            width: 100%
+        }
+
+        .search-plus{
+            display: flex;
+            padding: 0px 10px;
+        }
+
+        .search{
+            background: none;
+            display: none;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            position: relative;
+            line-height: 40px;
+            margin-right: 5px;
+            transition: linear 1s;
+        }
+
+        .search-icon{
+            background-color: white;
+            width: 45px;
+            height: 45px;
+            color: black;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            visibility: visible;
+            overflow: hidden;
+            z-index: 3;
+            position: relative;
+        }
+        
+        .search-icon i{
+            font-size: 30px;
+            display: flex;
+            position: absolute;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            z-index: 3;
+        }
+
+        .search-icon.active{
+            background-color: pink;
+        }
+
+        .search.active{
+            display: flex;
+        }
+
+        .search-hero.active{
+            width: 100%;
+            transition:linear 1s;
+        }
+
+        .search-icon i.fa-search, .search-icon.active i.fa-times{
+            display: block;
+        }
+
+        .search-icon i.fa-times, .search-icon.active i.fa-search{
+            display: none;
+        }    
+
+        .search-hero + .hero{
+            margin-left: 50px;
+        }
+
+        .content2{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .tinchinh{
+            display: flex;
+            flex-direction: column;
+            padding: 10px 20px;
+            width: 300px;
+            height: 400px;
+            background-color: green;
+        }
+
+        .tinchinh li{
+            font-size: 30px;
+            list-style-type: none;
+        }
+
+        .tinchinh a{
+            text-decoration: none;
+            display: flex;
+            font-size: 20px;
+        }
+
+        .tinphu{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 400px;
+        }
+
+        .tinmoinhat{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 200px;
+            background-color: yellowgreen;
+            padding: 10px 20px;
+        }
+
+        .tinmoinhat li{
+            font-size: 30px;
+            list-style-type: none;
+        }
+
+        .tinmoinhat a{
+            text-decoration: none;
+            display: flex;
+            font-size: 20px;
+            width: auto;
+        }
+
+        .tinnoibat{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            height: 200px;
+            background-color: pink;
+            padding: 10px 20px;
+        }
+
+        .tinnoibat li{
+            font-size: 30px;
+            list-style-type: none;
+        }
+
+        .tinnoibat a{
+            text-decoration: none;
+            display: flex;
+            font-size: 20px;
+        }
+
+        
+
+        
+
+       
+
+
+
+              
+    </style>
+</head>
+<body>
+    <div class="web">
+        <!-- <video autoplay loop muted src="https://res.cloudinary.com/vuthin/video/upload/v1630297754/y2mate.com_-_AWESOME_4K_VIDEO_1_MINUTE_DEMO_TEST_1080p_qqcthk.mp4"></video> -->
+        <div class="content1">
+            <a href="index.html"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Facebook_Logo_%282015%29_light.svg/2560px-Facebook_Logo_%282015%29_light.svg.png" alt=""></a>
+            <div class="container">
+                <div class="search-hero">
+                    <div class="search-plus">
+                        <input type="search" placeholder="Search" class="search" style="padding-left: 10px; outline: none; border: none; color: white; font-size: 20px;">
+                        <div class="search-icon">
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-times"></i>
+                        </div>    
+                    </div>                        
+                </div>
+                <div class="hero">
+                    <div class="toggle">
+                        <i class="fas fa-bars"></i>
+                        <i class="fas fa-times"></i>
+                    </div>  
+                    <div class="plus">
+                        <div class="menu">
+                            <div class="menu-con">
+                                <div class="icon">
+                                    <div class="text">
+                                        Tin tức
+                                    </div>
+                                    <i class="fas fa-newspaper"></i>
+                                </div>            
+                            </div>
+                            <div class="menu-con">
+                                <div class="icon">
+                                    <div class="text">
+                                        Thành tích
+                                    </div>
+                                    <i class="fas fa-newspaper"></i>
+                                </div>            
+                            </div>
+                            <div class="menu-con">
+                                <div class="icon">
+                                    <div class="text">
+                                       Phương pháp học tập
+                                    </div>
+                                    <i class="fas fa-newspaper"></i>
+                                </div>            
+                            </div>
+                        </div>
+                    </div>    
+                </div>
+            </div>
+        </div> 
+        <div class="content2">
+            <div class="tinchinh">
+                <li>Tin chính</li> 
+                <li></li>
+                <a href="">Nguyễn Hữu Danh Vũ</a>
+                <a href="">Nguyễn Hữu Danh Vũ</a>
+            </div>
+            <div class="tinphu">
+                <div class="tinmoinhat">
+                    <li>Tin chính</li> 
+                    <a href="">Nguyễn Hữu Danh Vũ</a>
+                    <a href="">Nguyễn Hữu Danh Vũ</a>
+                    <a href="">Nguyễn Hữu Danh Vũ</a>
+                </div>
+                <div class="tinnoibat">
+                    <li>Tin chính</li> 
+                    <a href="">Nguyễn Hữu Danh Vũ</a>
+                    <a href="">Nguyễn Hữu Danh Vũ</a>
+                    <a href="">Nguyễn Hữu Danh Vũ</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <ul class="logo">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Facebook_Logo_%282015%29_light.svg/2560px-Facebook_Logo_%282015%29_light.svg.png" alt="">                   
+                <li>Trung tâm anh ngữ hoa mặt trời là một trung tâm dạy tiếng anh tôt hàng đầu của Thị trân Di Lăng</li>
+            </ul>
+            <ul class="social">
+                <li><i class="fab fa-facebook" style="visibility: hidden;"></i><h3>Social<div class="underline"><span></span></div></h3></li>
+                <li class="social-con">                
+                    <div class="social-icon">
+                        <i class="fab fa-facebook"></i>
+                    </div>          
+                    <a href="https://www.facebook.com/vux2006/">Facebook</a>      
+                </li>
+                <li class="social-con">                
+                    <div class="social-icon">
+                        <i class="fab fa-instagram"></i>
+                    </div>          
+                    <a href="https://www.facebook.com/vux2006/">Instagram</a>      
+                </li><li class="social-con">                
+                    <div class="social-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>          
+                    <a href="https://www.facebook.com/vux2006/">+84886647973</a>      
+                </li><li class="social-con">                
+                    <div class="social-icon">
+                        <i class="far fa-envelope"></i>
+                    </div>          
+                    <a href="https://www.facebook.com/vux2006/">danhvu6a@gmail.com</a>      
+                </li>
+            </ul>
+            <ul class="copyright">                        
+                <li><h3>Copyright<div class="underline"><span></span></div></h3></li>
+                <li><i class="far fa-copyright"></i><h5>The Copyright by VuThin. All rights reserved</h5></li>
+            </ul>
+        </div>
+    </div>
+    <button class="backhome">
+        <i class="fas fa-arrow-up"></i>
+    </button> 
+
+    
+       
+    
+
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 400,
+        duration: 1000
+      });
+    </script>
+
+    <script>
+        let menuToggle = document.querySelector(".toggle");
+        let menu = document.querySelector(".menu");
+        menuToggle.onclick = function(){
+            menuToggle.classList.toggle("active")
+            menu.classList.toggle("active")
+        }
+    </script>  
+
+    <script>
+        let searchIcon = document.querySelector(".search-icon");
+        let search = document.querySelector(".search");        
+        searchIcon.onclick = function(){
+            searchIcon.classList.toggle("active")
+            search.classList.toggle("active")
+        }
+    </script>
+
+    <script>
+        let backhome = document.querySelector(".backhome");
+        backhome.onclick = function(){
+            backhome.classList.toggle(window.scrollTo({
+                top:0,
+                behavior:"smooth",
+            }))
+        }
+    </script>
+
+    <script type="text/javascript">
+        window.addEventListener("scroll", function(){
+            let furl = document.querySelector(".content1");
+            furl.classList.toggle("sticky", window.scrollY > 0)
+            let showbackhome = document.querySelector(".backhome");
+            showbackhome.classList.toggle("show", window.scrollY > 0)
+        })
+    </script>
+
+    
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>   
+</body>
+</html>

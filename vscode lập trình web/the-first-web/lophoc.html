@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anh ngữ hoa mặt trời</title>
+    <style>
+        *{
+    margin:0px;
+    padding:0px;
+}
+
+/* Code của thanh menu */
+
+.web{
+    background-color: rgb(61, 58, 58);
+    width: 100%;
+    height: 50px;   
+    display: flex ;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+
+.menu{
+    display: block;
+}
+
+.menu > li{
+    justify-content: space-around;
+    line-height: 50px;
+    list-style-type: none;
+    width: 250px;
+    float: left;
+}
+
+.menu > li > a{
+    display: block;
+    color: white;
+    text-decoration: none;  
+    position: relative;  
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu > li > a:hover{
+    opacity: 0.8;
+    background-color: green;
+}
+/* ĐOẠN CODE ĐỂ THÊM DẤU GẠCH CHÂN */
+.menu > li > a::after{
+    content:"";
+    width: 0%;
+    height: 5px;
+    background-color: white;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu > li > a:hover::after{
+    width: 100%;
+    transform: translateX(100);
+}
+
+.menu__con{
+    background-color: rgb(61, 58, 58);
+    width: 250px;
+    height: auto; 
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu__con > li{
+    line-height: 50px;
+    display:flex;
+    border: solid 2px;
+    border-color: red; 
+    text-decoration: none;
+    align-items: center;
+}
+
+.menu__con > li > a{
+    width: 250px;
+    text-align:center;
+    align-items:center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu__con > li > a:hover{
+    opacity: 0.8;
+    background-color: green;
+}
+
+.menu__gioithieu:hover .menu__con{
+    display: block;
+    position:absolute;
+}
+
+/* Về nội dung trên trang web */
+
+.thongtin{
+    width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    position: absolute;
+    background-image: url(https://i.pinimg.com/originals/2c/84/5a/2c845a66b8ad2a8aafd288bdc16cd459.jpg);
+    opacity: 0.8;
+    z-index: 0;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+}
+
+.trangchu{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.bang{
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.bang1 + .bang2{
+    margin: 0px 20px;
+}
+
+.bang p{
+    padding-top: 15px;
+}
+
+.bang1{
+    flex: 1;
+}
+
+.bang2{
+    flex: 2;
+}
+
+.bang3{
+    flex: 1;
+}
+    </style>
+</head>
+<body>
+    <div class="web">
+        <img src="https://scontent-sin6-2.xx.fbcdn.net/v/t1.6435-9/116745704_110846530728272_4764110237316609291_n.png?_nc_cat=105&ccb=1-3&_nc_sid=09cbfe&_nc_ohc=ZmwtJHJ9FvMAX-TZc9w&_nc_ht=scontent-sin6-2.xx&oh=6ee90ca32bef1efaa249f7e282fe429a&oe=60D86C6E" alt="">
+        <ul class="menu">
+            <li><a href="indexchinh.html">Trang chủ</a></li>
+            <li class="menu__gioithieu">
+                <a href="gioithieu.html">Giới thiệu</a>
+                <ul class="menu__con">
+                    <li><a href="phuongphaphoctap.html">Phương pháp học tập</a></li>
+                    <li><a href="giaovien.html">Giáo viên</a></li>
+                    <li><a href="lophoc.html">Lớp học</a></li>
+                </ul>            
+            </li>
+            <li><a href="tintuc.html">Tin tức</a></li>
+            <li><a href="thanhtich.html">Thành tích</a></li>
+            <li><a href="vetrangweb.html">Về trang web</a></li>
+        </ul>
+    </div>
+    <div class="thongtin">
+        <div class="trangchu">
+            <h1>Lớp học</h1>
+        </div>
+        <div class="bang">
+            <div class="bang1">
+                <h1>Tin nổi bật</h1>
+                <p>Ở đây chứa thông tin Khi sinh ra, bản năng sinh tồn là cái mà mỗi con vật có được. Chúng có thể đứng lên bằng chính đôi chân mình có thể chạy nhảy. Tạo hoá đã ưu ái ban cho chúng những khả năng kì diệu đó. Nhưng con người thì khác khi sinh ra tiếng khóc chào đời là tất cả những gì họ có được. Tiếng oa oa cất lên chỉ đơn giản cho mọi người biết một mầm sống mới đã ra đời. Nhưng mầm sống đó sẽ ra sao? Và tương lai của nó sẽ như thế nào. Cuộc sống phía trước là của chính nó và do nó quyết định. Giống như một nhà triết học đã nói: "Mỗi con vật khi sinh ra đều là tất cả những gì nó có. Chỉ có con người là ngay từ thuở lọt lòng thì chẳng là gì cả. Nó làm thế nào thì nó sẽ trở thành như thế ấy, và nó phải làm bằng tự do của chình nó Tôi chỉ có thể trở thành kẻ do chính tôi làm ra".
+
+                    "Mỗi con vật khi sinh ra đều là tất cả những gì nó có. Chỉ có con người là ngay từ thuở lọt lòng thì chẳng là gì cả" Thoạt đầu câu nói này có vẻ vô lý nhưng khi để ý từng câu từng chữ thì đây đúng là một quy luật của tự nhiên. Điều rõ ràng nhất ta có thể thấy được chính là thú non của một giống loài nào đó khi sinh ra đều mang tất cả những đặc điểm hình thái và cả tính chất của bố mẹ. Mèo con vừa mới sinh ra đã được thừa hưởng tất cả những đặc điểm của mèo bố mẹ. Màu lông bao phủ cơ thể giống với bố hoặc mẹ móng vuốt sắc nhọn phục vụ cho thói quen bắt chuột sau này. Hay một đàn rùa con vừa cắn đứt vỏ trứng chui ra ngoài về với biển khơi nhưng tại sao thú non yếu ớt như vậy làm sao bơi được trong dòng nước lạnh lẽo kia nhưng mẹ tạo hoá đã ban cho chúng khả năng đó hai chân như hai mái chèo có thể di chuyển dễ dàng trong làn nước. Những khả năng đặc biệt đó chỉ có thể thấy ở loài vật sống trên Trái đất.
+                    
+                    Nhưng còn con người thì sao? Một cô bé hay cậu bé vừa chào đời trông bụ bẫm kháu khỉnh nhưng không ai có thể nhìn nó mà đoán biết được bố mẹ nó là ai. Cơ thể yếu ớt kia không thể nào tự chống chọi với những khắc nghiệt của cuộc sống bên ngoài. Không như những con vật khi mở mắt thấy ánh sáng mặt trời cũng là lúc chúng phải bươn chải lo cho cuộc sống của mình. Cũng có những giống loài được sự chăm sóc của bố mẹ nhưng theo nặm tháng chúng sẽ tự lập và có thể không bao giò được gặp lại bố mẹ nữa. khác rất nhiều so với con người. Con người chúng ta ngay từ khi sinh ra tuy không sở hữu bất cứ thứ gì nhưng đã được đón nhận bao nhiêu tình thương yêu dịu dàng của mẹ và sự chăm sóc chu đáo của cha... Theo thời gian chúng ta lớn lên từng ngày trong vòng tay ấm áp đó.
+                    
+                    Cuộc sống thì không bao giờ êm dịu như vậy và luôn trớ trêu với nhiều người. Nhiều đứa bé sinh ra không biết mặt cha và cũng không biết thế nào là ngọt nào của sữa mẹ. Nhưng chúng cũng lớn lên theo năm tháng và trở thành một công dân của một đất nước nhưng tương lai và cuộc sống thì bị chôn sâu trong bốn bức tường của sự bất hạnh và cô đơn.
+                    
+                    Vừa lọt lòng mỗi người không là gì cả và củng có những số phận bất hạnh không có quyền được biết đấng sinh thành ra mình. Nhưng không vì thề mà tương lai và cuộc sống kia trở nên mù mịt và tối tăm. và họ không có cái quyền được mơ ước hay hi vọng. và tương lai tươi sáng, thành công và vinh quang se không bao giờ thuộc về họ. vì tất cả những mơ ước cao đẹp ấy không phãi được quyết định bởi hoàn cảnh sinh ra mà chính là do ý chí quyết tâm của mỗi người.
+                    
+                    "Nó làm thế nào thì nó sẽ trở thành như thế ấy, và nó phải làm bằng tự do của chình nó Tôi chỉ có thể trở thành kẻ do chính tôi làm ra". Vế sau câu nói của nhà triết học như một lời khuyên cho chúng ta. phải luôn biết vươn lên trong cuộc sống, phải có hoài bảo và lý tưởng và vạch ra một mục đích rõ ràng cho cuộc sống bản thân. Không bao giờ biết chùn bước trước bất cứ khó khăn nào.
+                    
+                    Thanh niên ngày nay không chỉ vùi đầu vào sách vở như đàn anh lớp trước. Cuộc sống hiện đại khoa học kĩ thuật tiến bộ thói quen hằng ngày không gói gọn trong bốn bức tường chỉ có học học và học. Thời gian hằng ngày dường như được mở rộng hơn với rất nhiều những hoạt động thú vị. như chiến dịch mùa hè xanh. Thanh niên được tự do vô tư đến những vùng khó khăn giúp đỡ nhân dân nghèo vùng sâu vùng xa hay những chuyến đi ngắn ngày chỉ đơn giản là chia sẻ quà bánh cho những trẻ em ở những làng trẻ mồ côi, tất cả đều xuất phát từ lòng tình nguyện và sự yêu thương giống nòi. Thanh niên ngày nay không chỉ học tập tốt lao động tốt mà còn có cả lòng nhân ái khoan dung. Những điều kiện đó chính là nền tảng cho sự thành công sau này. Sự thành công đó họ đạt được là do chính đôi tay và khối óc của họ không dựa dẫm vào bất cứ ai......"Khát vọng chính là nguồn động lực có sức mạnh vô biên, tiềm tàng bên trong mỗi con người. Động lực này được thể hiện qua những hành động liên tục và bền bỉ, để con người không bao giờ từ bỏ ước mơ, không bao giờ khuất phục hoàn cảnh. " Quả thật như cau danh ngôn con người có thề đạt được tât cả khi có khát vọng bạn chi thật sự thất bại khi ban từ bỏ khi ước mơ và cố gắng.
+                    
+                    Nhưng những ý chí quyết tâm kia không phải lúc nào cũng mỉm cười với mọi người và sẽ không tìm đến bất cứ ai, chỉ có những người luôn có gắng vươn lên trong cuộc sống vượt qua mọi khó khăn và đến lúc những khó khăn kia ko làm chùng bước họ thì chính là lúc họ tím được những hạnh phúc và những khám phá bổ ích cho bản thân. Và có một số đông sẽ không bao giờ khám phá ra những chân lý đó vì sự bi quan luôn yếu lòng trước những khó khăn vấp phải. Thất bại là khởi đầu của sự thành công và thất bại chỉ là thành công khi chúng ta cố gắng hết sức và không ngừng hoàn thiên mình.
+                    
+                    Con người khi sinh ra không là gì cả chỉ là mầm sống mới được sinh ra chỉ là một đúa trẻ sơ sinh không tên tuổi, Nhưng bằng tất cả sự nổ lực không ngừng lòng quyết tâm bền bỉ và ý chí vươn lên thì mầm sống ấy sẽ lớn lên và sinh hoa kết trai góp cho đời những hương sắc. Và khi chết đi họ đã có được tất cả mặc dù không còn trên cỏi đời này nữa.
+                    
+                    "Tạo lập! Xây dựng! Phục vụ! Đó là những mệnh lệnh của thiên nhiên. Hãy làm theo những mệnh lệnh đó, và bạn sẽ thấy sự giàu sang và phong phú của vũ trụ là vô tận." hãy sống hết mình và không ngừng phấn đấu ban sẽ tìm thấy được tất cả và làm chủ mọi thứ vì "Tôi chỉ có thể trở thành kẻ do chính tôi làm ra". mà. không phải do ai khác sắp đặt hay ép buộc và tư do chính là trang mà chúng ta có được.</p>
+            </div>
+            <div class="bang2">
+                <h1>Tin chính</h1>
+                <p>Ở đây chứa thông tin Khi sinh ra, bản năng sinh tồn là cái mà mỗi con vật có được. Chúng có thể đứng lên bằng chính đôi chân mình có thể chạy nhảy. Tạo hoá đã ưu ái ban cho chúng những khả năng kì diệu đó. Nhưng con người thì khác khi sinh ra tiếng khóc chào đời là tất cả những gì họ có được. Tiếng oa oa cất lên chỉ đơn giản cho mọi người biết một mầm sống mới đã ra đời. Nhưng mầm sống đó sẽ ra sao? Và tương lai của nó sẽ như thế nào. Cuộc sống phía trước là của chính nó và do nó quyết định. Giống như một nhà triết học đã nói: "Mỗi con vật khi sinh ra đều là tất cả những gì nó có. Chỉ có con người là ngay từ thuở lọt lòng thì chẳng là gì cả. Nó làm thế nào thì nó sẽ trở thành như thế ấy, và nó phải làm bằng tự do của chình nó Tôi chỉ có thể trở thành kẻ do chính tôi làm ra".
+
+                    "Mỗi con vật khi sinh ra đều là tất cả những gì nó có. Chỉ có con người là ngay từ thuở lọt lòng thì chẳng là gì cả" Thoạt đầu câu nói này có vẻ vô lý nhưng khi để ý từng câu từng chữ thì đây đúng là một quy luật của tự nhiên. Điều rõ ràng nhất ta có thể thấy được chính là thú non của một giống loài nào đó khi sinh ra đều mang tất cả những đặc điểm hình thái và cả tính chất của bố mẹ. Mèo con vừa mới sinh ra đã được thừa hưởng tất cả những đặc điểm của mèo bố mẹ. Màu lông bao phủ cơ thể giống với bố hoặc mẹ móng vuốt sắc nhọn phục vụ cho thói quen bắt chuột sau này. Hay một đàn rùa con vừa cắn đứt vỏ trứng chui ra ngoài về với biển khơi nhưng tại sao thú non yếu ớt như vậy làm sao bơi được trong dòng nước lạnh lẽo kia nhưng mẹ tạo hoá đã ban cho chúng khả năng đó hai chân như hai mái chèo có thể di chuyển dễ dàng trong làn nước. Những khả năng đặc biệt đó chỉ có thể thấy ở loài vật sống trên Trái đất.
+                    
+                    Nhưng còn con người thì sao? Một cô bé hay cậu bé vừa chào đời trông bụ bẫm kháu khỉnh nhưng không ai có thể nhìn nó mà đoán biết được bố mẹ nó là ai. Cơ thể yếu ớt kia không thể nào tự chống chọi với những khắc nghiệt của cuộc sống bên ngoài. Không như những con vật khi mở mắt thấy ánh sáng mặt trời cũng là lúc chúng phải bươn chải lo cho cuộc sống của mình. Cũng có những giống loài được sự chăm sóc của bố mẹ nhưng theo nặm tháng chúng sẽ tự lập và có thể không bao giò được gặp lại bố mẹ nữa. khác rất nhiều so với con người. Con người chúng ta ngay từ khi sinh ra tuy không sở hữu bất cứ thứ gì nhưng đã được đón nhận bao nhiêu tình thương yêu dịu dàng của mẹ và sự chăm sóc chu đáo của cha... Theo thời gian chúng ta lớn lên từng ngày trong vòng tay ấm áp đó.
+                    
+                    Cuộc sống thì không bao giờ êm dịu như vậy và luôn trớ trêu với nhiều người. Nhiều đứa bé sinh ra không biết mặt cha và cũng không biết thế nào là ngọt nào của sữa mẹ. Nhưng chúng cũng lớn lên theo năm tháng và trở thành một công dân của một đất nước nhưng tương lai và cuộc sống thì bị chôn sâu trong bốn bức tường của sự bất hạnh và cô đơn.
+                    
+                    Vừa lọt lòng mỗi người không là gì cả và củng có những số phận bất hạnh không có quyền được biết đấng sinh thành ra mình. Nhưng không vì thề mà tương lai và cuộc sống kia trở nên mù mịt và tối tăm. và họ không có cái quyền được mơ ước hay hi vọng. và tương lai tươi sáng, thành công và vinh quang se không bao giờ thuộc về họ. vì tất cả những mơ ước cao đẹp ấy không phãi được quyết định bởi hoàn cảnh sinh ra mà chính là do ý chí quyết tâm của mỗi người.
+                    
+                    "Nó làm thế nào thì nó sẽ trở thành như thế ấy, và nó phải làm bằng tự do của chình nó Tôi chỉ có thể trở thành kẻ do chính tôi làm ra". Vế sau câu nói của nhà triết học như một lời khuyên cho chúng ta. phải luôn biết vươn lên trong cuộc sống, phải có hoài bảo và lý tưởng và vạch ra một mục đích rõ ràng cho cuộc sống bản thân. Không bao giờ biết chùn bước trước bất cứ khó khăn nào.
+                    
+                    Thanh niên ngày nay không chỉ vùi đầu vào sách vở như đàn anh lớp trước. Cuộc sống hiện đại khoa học kĩ thuật tiến bộ thói quen hằng ngày không gói gọn trong bốn bức tường chỉ có học học và học. Thời gian hằng ngày dường như được mở rộng hơn với rất nhiều những hoạt động thú vị. như chiến dịch mùa hè xanh. Thanh niên được tự do vô tư đến những vùng khó khăn giúp đỡ nhân dân nghèo vùng sâu vùng xa hay những chuyến đi ngắn ngày chỉ đơn giản là chia sẻ quà bánh cho những trẻ em ở những làng trẻ mồ côi, tất cả đều xuất phát từ lòng tình nguyện và sự yêu thương giống nòi. Thanh niên ngày nay không chỉ học tập tốt lao động tốt mà còn có cả lòng nhân ái khoan dung. Những điều kiện đó chính là nền tảng cho sự thành công sau này. Sự thành công đó họ đạt được là do chính đôi tay và khối óc của họ không dựa dẫm vào bất cứ ai......"Khát vọng chính là nguồn động lực có sức mạnh vô biên, tiềm tàng bên trong mỗi con người. Động lực này được thể hiện qua những hành động liên tục và bền bỉ, để con người không bao giờ từ bỏ ước mơ, không bao giờ khuất phục hoàn cảnh. " Quả thật như cau danh ngôn con người có thề đạt được tât cả khi có khát vọng bạn chi thật sự thất bại khi ban từ bỏ khi ước mơ và cố gắng.
+                    
+                    Nhưng những ý chí quyết tâm kia không phải lúc nào cũng mỉm cười với mọi người và sẽ không tìm đến bất cứ ai, chỉ có những người luôn có gắng vươn lên trong cuộc sống vượt qua mọi khó khăn và đến lúc những khó khăn kia ko làm chùng bước họ thì chính là lúc họ tím được những hạnh phúc và những khám phá bổ ích cho bản thân. Và có một số đông sẽ không bao giờ khám phá ra những chân lý đó vì sự bi quan luôn yếu lòng trước những khó khăn vấp phải. Thất bại là khởi đầu của sự thành công và thất bại chỉ là thành công khi chúng ta cố gắng hết sức và không ngừng hoàn thiên mình.
+                    
+                    Con người khi sinh ra không là gì cả chỉ là mầm sống mới được sinh ra chỉ là một đúa trẻ sơ sinh không tên tuổi, Nhưng bằng tất cả sự nổ lực không ngừng lòng quyết tâm bền bỉ và ý chí vươn lên thì mầm sống ấy sẽ lớn lên và sinh hoa kết trai góp cho đời những hương sắc. Và khi chết đi họ đã có được tất cả mặc dù không còn trên cỏi đời này nữa.
+                    
+                    "Tạo lập! Xây dựng! Phục vụ! Đó là những mệnh lệnh của thiên nhiên. Hãy làm theo những mệnh lệnh đó, và bạn sẽ thấy sự giàu sang và phong phú của vũ trụ là vô tận." hãy sống hết mình và không ngừng phấn đấu ban sẽ tìm thấy được tất cả và làm chủ mọi thứ vì "Tôi chỉ có thể trở thành kẻ do chính tôi làm ra". mà. không phải do ai khác sắp đặt hay ép buộc và tư do chính là trang mà chúng ta có được.</p>
+            </div>
+            <div class="bang3">
+                <h1>Tin mới nhất</h1>
+                <p>Ở đây chứa thông tin Khi sinh ra, bản năng sinh tồn là cái mà mỗi con vật có được. Chúng có thể đứng lên bằng chính đôi chân mình có thể chạy nhảy. Tạo hoá đã ưu ái ban cho chúng những khả năng kì diệu đó. Nhưng con người thì khác khi sinh ra tiếng khóc chào đời là tất cả những gì họ có được. Tiếng oa oa cất lên chỉ đơn giản cho mọi người biết một mầm sống mới đã ra đời. Nhưng mầm sống đó sẽ ra sao? Và tương lai của nó sẽ như thế nào. Cuộc sống phía trước là của chính nó và do nó quyết định. Giống như một nhà triết học đã nói: "Mỗi con vật khi sinh ra đều là tất cả những gì nó có. Chỉ có con người là ngay từ thuở lọt lòng thì chẳng là gì cả. Nó làm thế nào thì nó sẽ trở thành như thế ấy, và nó phải làm bằng tự do của chình nó Tôi chỉ có thể trở thành kẻ do chính tôi làm ra".
+
+                    "Mỗi con vật khi sinh ra đều là tất cả những gì nó có. Chỉ có con người là ngay từ thuở lọt lòng thì chẳng là gì cả" Thoạt đầu câu nói này có vẻ vô lý nhưng khi để ý từng câu từng chữ thì đây đúng là một quy luật của tự nhiên. Điều rõ ràng nhất ta có thể thấy được chính là thú non của một giống loài nào đó khi sinh ra đều mang tất cả những đặc điểm hình thái và cả tính chất của bố mẹ. Mèo con vừa mới sinh ra đã được thừa hưởng tất cả những đặc điểm của mèo bố mẹ. Màu lông bao phủ cơ thể giống với bố hoặc mẹ móng vuốt sắc nhọn phục vụ cho thói quen bắt chuột sau này. Hay một đàn rùa con vừa cắn đứt vỏ trứng chui ra ngoài về với biển khơi nhưng tại sao thú non yếu ớt như vậy làm sao bơi được trong dòng nước lạnh lẽo kia nhưng mẹ tạo hoá đã ban cho chúng khả năng đó hai chân như hai mái chèo có thể di chuyển dễ dàng trong làn nước. Những khả năng đặc biệt đó chỉ có thể thấy ở loài vật sống trên Trái đất.
+                    
+                    Nhưng còn con người thì sao? Một cô bé hay cậu bé vừa chào đời trông bụ bẫm kháu khỉnh nhưng không ai có thể nhìn nó mà đoán biết được bố mẹ nó là ai. Cơ thể yếu ớt kia không thể nào tự chống chọi với những khắc nghiệt của cuộc sống bên ngoài. Không như những con vật khi mở mắt thấy ánh sáng mặt trời cũng là lúc chúng phải bươn chải lo cho cuộc sống của mình. Cũng có những giống loài được sự chăm sóc của bố mẹ nhưng theo nặm tháng chúng sẽ tự lập và có thể không bao giò được gặp lại bố mẹ nữa. khác rất nhiều so với con người. Con người chúng ta ngay từ khi sinh ra tuy không sở hữu bất cứ thứ gì nhưng đã được đón nhận bao nhiêu tình thương yêu dịu dàng của mẹ và sự chăm sóc chu đáo của cha... Theo thời gian chúng ta lớn lên từng ngày trong vòng tay ấm áp đó.
+                    
+                    Cuộc sống thì không bao giờ êm dịu như vậy và luôn trớ trêu với nhiều người. Nhiều đứa bé sinh ra không biết mặt cha và cũng không biết thế nào là ngọt nào của sữa mẹ. Nhưng chúng cũng lớn lên theo năm tháng và trở thành một công dân của một đất nước nhưng tương lai và cuộc sống thì bị chôn sâu trong bốn bức tường của sự bất hạnh và cô đơn.
+                    
+                    Vừa lọt lòng mỗi người không là gì cả và củng có những số phận bất hạnh không có quyền được biết đấng sinh thành ra mình. Nhưng không vì thề mà tương lai và cuộc sống kia trở nên mù mịt và tối tăm. và họ không có cái quyền được mơ ước hay hi vọng. và tương lai tươi sáng, thành công và vinh quang se không bao giờ thuộc về họ. vì tất cả những mơ ước cao đẹp ấy không phãi được quyết định bởi hoàn cảnh sinh ra mà chính là do ý chí quyết tâm của mỗi người.
+                    
+                    "Nó làm thế nào thì nó sẽ trở thành như thế ấy, và nó phải làm bằng tự do của chình nó Tôi chỉ có thể trở thành kẻ do chính tôi làm ra". Vế sau câu nói của nhà triết học như một lời khuyên cho chúng ta. phải luôn biết vươn lên trong cuộc sống, phải có hoài bảo và lý tưởng và vạch ra một mục đích rõ ràng cho cuộc sống bản thân. Không bao giờ biết chùn bước trước bất cứ khó khăn nào.
+                    
+                    Thanh niên ngày nay không chỉ vùi đầu vào sách vở như đàn anh lớp trước. Cuộc sống hiện đại khoa học kĩ thuật tiến bộ thói quen hằng ngày không gói gọn trong bốn bức tường chỉ có học học và học. Thời gian hằng ngày dường như được mở rộng hơn với rất nhiều những hoạt động thú vị. như chiến dịch mùa hè xanh. Thanh niên được tự do vô tư đến những vùng khó khăn giúp đỡ nhân dân nghèo vùng sâu vùng xa hay những chuyến đi ngắn ngày chỉ đơn giản là chia sẻ quà bánh cho những trẻ em ở những làng trẻ mồ côi, tất cả đều xuất phát từ lòng tình nguyện và sự yêu thương giống nòi. Thanh niên ngày nay không chỉ học tập tốt lao động tốt mà còn có cả lòng nhân ái khoan dung. Những điều kiện đó chính là nền tảng cho sự thành công sau này. Sự thành công đó họ đạt được là do chính đôi tay và khối óc của họ không dựa dẫm vào bất cứ ai......"Khát vọng chính là nguồn động lực có sức mạnh vô biên, tiềm tàng bên trong mỗi con người. Động lực này được thể hiện qua những hành động liên tục và bền bỉ, để con người không bao giờ từ bỏ ước mơ, không bao giờ khuất phục hoàn cảnh. " Quả thật như cau danh ngôn con người có thề đạt được tât cả khi có khát vọng bạn chi thật sự thất bại khi ban từ bỏ khi ước mơ và cố gắng.
+                    
+                    Nhưng những ý chí quyết tâm kia không phải lúc nào cũng mỉm cười với mọi người và sẽ không tìm đến bất cứ ai, chỉ có những người luôn có gắng vươn lên trong cuộc sống vượt qua mọi khó khăn và đến lúc những khó khăn kia ko làm chùng bước họ thì chính là lúc họ tím được những hạnh phúc và những khám phá bổ ích cho bản thân. Và có một số đông sẽ không bao giờ khám phá ra những chân lý đó vì sự bi quan luôn yếu lòng trước những khó khăn vấp phải. Thất bại là khởi đầu của sự thành công và thất bại chỉ là thành công khi chúng ta cố gắng hết sức và không ngừng hoàn thiên mình.
+                    
+                    Con người khi sinh ra không là gì cả chỉ là mầm sống mới được sinh ra chỉ là một đúa trẻ sơ sinh không tên tuổi, Nhưng bằng tất cả sự nổ lực không ngừng lòng quyết tâm bền bỉ và ý chí vươn lên thì mầm sống ấy sẽ lớn lên và sinh hoa kết trai góp cho đời những hương sắc. Và khi chết đi họ đã có được tất cả mặc dù không còn trên cỏi đời này nữa.
+                    
+                    "Tạo lập! Xây dựng! Phục vụ! Đó là những mệnh lệnh của thiên nhiên. Hãy làm theo những mệnh lệnh đó, và bạn sẽ thấy sự giàu sang và phong phú của vũ trụ là vô tận." hãy sống hết mình và không ngừng phấn đấu ban sẽ tìm thấy được tất cả và làm chủ mọi thứ vì "Tôi chỉ có thể trở thành kẻ do chính tôi làm ra". mà. không phải do ai khác sắp đặt hay ép buộc và tư do chính là trang mà chúng ta có được.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

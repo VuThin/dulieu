@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vh;
+            height: 100vh;
+            position: relative;
+        }
+        .video4k{
+            width: 100vh;
+            height: 100vh;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source class="video4k" src="https://ak.picdn.net/shutterstock/videos/1033812614/preview/stock-footage-space-view-of-the-sun-rising-on-planet-earth-going-from-night-to-day-with-cloud-formations-and.webm">
+    </video>
+    <div class="text">
+        <li><a href="#">Vũ</a></li>
+    </div>
+
+    <script>
+        window.addEventListener("volumechange", function(){
+            let video = document.querySelector("video");
+            video.classList.toggle("active",window.volume = 0)
+        })
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,94 @@
+.main{
+    background-color:rgb(61, 58, 58);
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;    
+}
+
+.main__items {
+    list-style-type: none ;  
+    display: flex;    
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.main__items li{
+    padding: 0px 100px;
+    transition: opaity 0.2s ease;
+}
+
+.main__items a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    align-items: center;
+    text-align: center;
+    text-transform: uppercase;
+    transition: opaity 0.2s ease;
+    font-weight: bold;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    justify-content: space-around;   
+}
+
+.main__items a::after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
+    bottom: 0px;
+    left: 0;
+}
+
+.main__items a:hover:after{
+    width: 50%;
+    transform: translateX(100);
+    
+}
+
+.main__items li:hover{
+    opacity: 0.8;
+}
+
+.gioithieu{
+    display: none;
+    position: absolute;
+    width: 200px;
+    height: 150px;
+    background-color: rgb(61, 58, 58);
+    margin: 0px auto; 
+    top: 58px;
+    left: 700px;
+    padding-inline-start: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    
+}
+
+.gioithieu li{
+    width: 200px;
+    height: 50px;
+    list-style-type: none;
+    align-items: center;   
+    text-align: center;  
+    box-sizing: border-box;
+}
+
+.gioithieu a{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;           
+}
+
+.main__items__gioithieu:hover .gioithieu {
+    display: block;  
+}

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hội trưởng thành</title>
+    <style>
+    *{
+    margin:0px;
+    padding:0px;
+    }
+
+    div{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .home{
+        margin-left: 15px;
+    }
+
+    .namepage{
+        margin-right: 300px;
+    }
+
+    .adult{
+        display: flex;
+        justify-content: space-between;
+        background-color: brown;
+    }
+
+    .adult li{
+        display: flex;
+        justify-content: space-between;
+        list-style-type: none;
+        width: 100%;
+        line-height: 40px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .adult a{
+        display: flex;
+        text-decoration: none;
+        color: black;
+        align-items: center;
+    }
+
+    img{
+        width: 30px;
+        height: 30px;
+    }
+
+    .information{
+        display: flex;
+        justify-content:space-around;
+        margin: 100px;
+    }
+
+    .information li{
+        display: block;
+        list-style-type: none;
+        width: 300px;
+        height: 200px;
+        /* line-height: 50px; */
+        text-align: center;
+        justify-content:space-between;
+        border: 1px solid black;
+        border-radius: 7px;
+        background-color: pink;
+    } 
+
+    .information a{
+        width: 300px;
+        line-height: 30px;
+        margin: 15px 10px;
+        text-align: left;
+        text-decoration: none;
+        color: black;
+    }
+
+    .information li:hover{    
+        transform: scale(1.2) rotate(5deg);
+        transition: ease-in-out 0.5s;
+    }
+
+    .vu::after{
+        content: "";
+        width: 0%;
+        height: 5px;
+        bottom: 0px;
+        left: 0px;
+        background-color: orange;
+        position: absolute;
+        border-radius: 7px;
+    }
+
+    .vu:hover::after{
+        transform: translateX(100);
+        width: 100%;
+        transition:all 0.7s;
+    }
+
+    .vu::before{
+        content: "";
+        width: 0%;
+        height: 5px;
+        top: 0px;
+        right: 0px;
+        background-color: orange;
+        position: absolute;
+        border-radius: 7px;
+    }
+
+    .vu:hover::before{
+        transform: translateX(100);
+        width: 100%;
+        transition:all 0.7s;
+    }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="adult">            
+            <li>
+                <a href="#" class="home"><img src="https://image.flaticon.com/icons/png/512/25/25694.png" alt="truongthanh">Home</a>
+                <li class="namepage">Sơ lược tiểu sử của các thằng thiểu năng</li>
+            </li>
+        </div>
+        <div class="information">
+            <li class="vu">
+                <a href="details-vu.html">Nguyễn Hữu Danh Vũ</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Danh Vũ</a>
+            </li>
+        </div>
+        <div class="information">
+            <li class="vu">
+                <a href="#">Nguyễn Hữu Tri</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Tri</a>
+            </li>
+            <li class="vu">
+                <a href="#">Nguyễn Hữu Tri</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Tri</a>
+            </li>
+        </div>
+        <div class="information">
+            <li class="vu">
+                <a href="#">Nguyễn Hữu Tri</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Tri</a>
+            </li>
+            <li class="vu">
+                <a href="#">Nguyễn Hữu Tri</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Tri</a>
+            </li>
+        </div>
+        <div class="information">
+            <li class="vu">
+                <a href="#">Nguyễn Hữu Tri</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Tri</a>
+            </li>
+            <li class="vu">
+                <a href="#">Nguyễn Hữu Tri</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Tri</a>
+            </li>
+        </div>
+        <div class="information">
+            <li class="vu">
+                <a href="#">Nguyễn Hữu Danh Vũ</a><br>
+                <a>Tên đầy đủ: Nguyễn Hữu Danh Vũ</a>
+            </li>
+        </div>
+    </div>
+</body>
+</html>

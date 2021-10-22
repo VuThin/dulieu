@@ -1,0 +1,200 @@
+*{
+    margin:0px;
+    padding:0px;
+}
+
+/* Code của thanh menu */
+
+.web{
+    background-color: rgb(61, 58, 58);
+    width: 100%;
+    height: 50px;   
+    display: flex ;
+    justify-content: space-around;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    justify-content: space-around;
+}
+
+.menu{
+    display: block;
+}
+
+.menu > li{
+    justify-content: space-around;
+    line-height: 50px;
+    list-style-type: none;
+    width: 250px;
+    float: left;
+}
+
+.menu > li > a{
+    display: block;
+    color: white;
+    text-decoration: none;  
+    position: relative;  
+    text-align: center;
+    align-items: center;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu > li > a:hover{
+    opacity: 0.8;
+    background-color: green;
+}
+/* ĐOẠN CODE ĐỂ THÊM DẤU GẠCH CHÂN */
+.menu > li > a::after{
+    content:"";
+    width: 0%;
+    height: 5px;
+    background-color: white;
+    bottom: 0px;
+    left: 0px;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu > li > a:hover::after{
+    width: 100%;
+    transform: translateX(100);
+}
+
+.menu__con{
+    background-color: rgb(61, 58, 58);
+    width: 250px;
+    height: auto; 
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.menu__con > li{
+    line-height: 50px;
+    display:flex;
+    border: solid 2px;
+    border-color: red; 
+    text-decoration: none;
+    align-items: center;
+}
+
+.menu__con > li > a{
+    width: 250px;
+    text-align:center;
+    align-items:center;
+    color: white;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu__con > li > a:hover{
+    opacity: 0.8;
+    background-color: green;
+}
+
+.menu__gioithieu:hover .menu__con{
+    display: block;
+    position:absolute;
+}
+
+/* Về nội dung trên trang web */
+
+.thongtin{
+    width: 100%;
+    height: auto;
+    background-size: 100% 100%;
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+    z-index: 0;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.trangchu{
+    padding-top: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.bang{
+    margin: 20px 20px;
+    display: flex;
+    justify-content: space-around;
+    flex: 1;
+}
+
+.bang1 + .bang2{
+    margin-left: 30px;
+}
+
+.bang p{
+    padding-top: 15px;
+}
+
+.bang1{
+    flex: 2;
+}
+
+.bang1 p{
+    width: 1000px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.bang2{
+    flex: 1;
+}
+
+.tinchinh{
+    margin-top: 15px;
+}
+
+.tinchinh li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.tinchinh a{
+    color: black;
+    text-decoration: none;
+}
+
+.tinchinh a:hover{
+    opacity: 0.8;
+}
+
+.noibat{
+    margin-top: 15px;
+}
+
+.noibat li{
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.noibat a{
+    color: black;
+    text-decoration: none;
+}
+
+.noibat a:hover{
+    opacity: 0.8;
+}
+
+.moinhat{
+    margin-top: 15px;
+}
+
+.moinhat li{
+    list-style-type: none;
+    margin-top: 10px;
+}
+
+.moinhat a{
+    color: black;
+    text-decoration: none;
+}
+
+.moinhat a:hover{
+    opacity: 0.8;
+}
